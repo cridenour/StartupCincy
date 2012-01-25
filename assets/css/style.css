@@ -66,6 +66,17 @@ td { vertical-align: top; }
    Author: 
    ========================================================================== */
 
+body { background: #FAFAFA; }
+header, #main, footer { width: 760px; margin: 0 auto; }
+
+header { margin-top: 100px; border-bottom: 2px #AAA solid; padding-bottom: 20px; height: 130px; }
+header .logo{ border-right: 2px #AAA inset; width: 380px; text-align: right; float: left;}
+header .logo img { margin-right: 30px; }
+header .about { float: left; }
+header .about p { width: 300px; margin-left: 30px; text-shadow: -1px -1px 1px #BABABA, 1px 1px 1px #222222; color: #FAFAFA; font-size: 20px; }
+
+#main { clear: both; padding-top: 10px;}
+
 
 
 
