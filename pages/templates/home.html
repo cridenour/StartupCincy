@@ -3,5 +3,9 @@
 {% block body_class %}home{% endblock %}
 
 {% block content %}
-<p>Welcome home.</p>
+<ul>
+{% for c in companies %}
+<li><img src="{{ c.logo.url }}" /></li>
+{% endfor %}
+</ul>
 {% endblock %}
