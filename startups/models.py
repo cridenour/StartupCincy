@@ -1,5 +1,10 @@
 from django.db import models
 
+import urllib2
+from crunchbase import getCompany
+from django.core.files import File
+from django.core.files.temp import NamedTemporaryFile
+
 class Company(models.Model):
     name = models.CharField(max_length=255)
     permalink = models.CharField(max_length=255, default='', blank=True, unique=True)
@@ -17,7 +22,38 @@ class Company(models.Model):
         return u'http://www.crunchbase.com/company/' + self.permalink
 
     def update(self):
-        pass
+        cb = getCompany(permalink)
+
+        self.name = cb[u'name']
+        self.permalink = cb[u'permalink']
+        self.homepage = cb[u'homepage_url']
+        self.blog = cb[u'blog_url']
+        self.twitter = cb[u'twitter_username']
+
+        self.employees = cb[u'number_of_employees']
+        self.founded = cb[u'founded_year']
+
+        self.email = cb[u'email_address']
+        self.phone = cb[u'phone_number']
+
+        self.overview = cb[u'overview']
+
+        # Download logo, store it.
+        logo_url = u'http://www.crunchbase.com/' + cb[u'image'][u'available_sizes'][0][1]
+
+        img_temp = NamedTemporaryFile()
+        img_temp.write(urllib2.urlopen(logo_url).read())
+        img_temp.flush()
+
+        self.logo.save(permalink + '.jpg', File(img_temp))
+
+        self.save()
+
+    def __unicode__(self):
+        return "%s" % self.name
+
+    class Meta:
+        verbose_name_plural = "Companies"
 
 class CompanyPeople(models.Model):
     company = models.ForeignKey(Company, related_name='people')
@@ -27,3 +63,9 @@ class CompanyPeople(models.Model):
 
     def update(self):
         pass
+
+    def __unicode__(self):
+        return "%s - %s" % (self.name, self.title)
+
+    class Meta:
+        verbose_name_plural = "Key Company People"

@@ -42,7 +42,7 @@ def createCompany(permalink):
             cp = CompanyPeople()
             cp.company = c
             cp.title = p[u'title']
-            cp.name = p[u'person'][u'first_name'] + ' ' + p[u'person'][u'last_name']
+            cp.name = ' '.join([p[u'person'][u'first_name'], p[u'person'][u'last_name']])
             cp.permalink = p[u'person'][u'permalink']
 
             cp.save()
