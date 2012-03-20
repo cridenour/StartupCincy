@@ -4,7 +4,42 @@
 
 {% block content %}
 <div class="slider" id="homepage-slider">
-    <img src="http://placekitten.com/690/210" />
+    <div class="slides">
+        <div class="slide active" id="slide-1">
+            <img src="http://placekitten.com/690/210" />
+            <div class="slide-description">
+                <h2>Slide Text</h2>
+                <p>Interesting startup news about Cincinnati!</p>
+            </div>
+        </div>
+        <div class="slide" id="slide-2">
+            <img src="http://placekitten.com/g/690/210" />
+            <div class="slide-description">
+                <h2>B&W Text</h2>
+                <p>More startup news about Cincinnati!</p>
+            </div>
+        </div>
+        <div class="slide" id="slide-3">
+            <img src="http://placekitten.com/690/210" />
+            <div class="slide-description">
+                <h2>Third Text</h2>
+                <p>Interesting startup pictures about da nati.</p>
+            </div>
+        </div>
+    </div>
+    <div class="slider-controls">
+        <ul>
+            <li class="active">
+                <a class="red" href="#" data-for="slide-1">&nbsp;</a>
+            </li>
+            <li>
+                <a class="orange" href="#" data-for="slide-2">&nbsp;</a>
+            </li>
+            <li>
+                <a class="blue" href="#" data-for="slide-3">&nbsp;</a>
+            </li>
+        </ul>
+    </div>
 </div>
 <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
 <div class="two-column">

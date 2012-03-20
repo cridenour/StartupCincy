@@ -61,6 +61,29 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
 
+/* Slider styles */
+.slider { width: 690px; height: 210px; position: relative; }
+.slider .slides .slide { position: absolute; display: none;}
+.slider .slides .active { display: block; }
+.slider .slide-description { position: absolute; top: 0; left: 0; color: #FFFFFF; width: 160px; padding: 10px 20px; background-color: rgba(0,0,0,0.5); height: 190px;}
+.slider .slider-controls { width: 52px; margin: 0 auto; text-align: center; }
+.slider .slider-controls ul { position: absolute; top: 220px; list-style: none; padding: 0; margin: 0;}
+.slider .slider-controls ul li { float: left; }
+.slider .slider-controls ul li a { border: 1px solid #000000; border-radius: 5px; display: block; background: #000; width: 5px; height: 5px; margin: 0 5px;}
+.slider .slider-controls ul li a.red {border-color: #ed1c24; background: #ed1c24;}
+.slider .slider-controls ul li a.orange {border-color: #fcb040; background: #fcb040;}
+.slider .slider-controls ul li a.blue {border-color: #00aeef; background: #00aeef;}
+.slider .slider-controls ul li.active a { background: #FFFFFF; }
+
+/* Social Media Icons */
+.sm-icon { width: 36px; height: 32px; opacity: 0.4; float: left; background: url(../images/sm_icons.png) no-repeat; background-position: 0 0; display: block; text-indent: -9999em;}
+.sm-icon:hover { opacity: 1; }
+.facebook { background-position: -40px -33px; }
+.facebook:hover { background-position: -40px 0; }
+.twitter { background-position: -90px -33px; }
+.twitter:hover { background-position: -90px 0; }
+
+
 /* Main styles */
 #container { background: url(../images/bg.png) repeat-x; }
 div.logo { width: 250px; margin: 0 auto; padding: 30px 0; }
@@ -85,8 +108,9 @@ h1 { color: #ed1c24; font-size: 48px; font-weight: 100; text-align: center; marg
 div.divider { height: 0px; width: 730px; border-top: 2px solid #EDEDED; border-bottom: 4px solid #e1e1e1; }
 
 footer { background: #ed1c24; }
-footer p { display: block; width: 690px; margin: 30px auto 0 auto; padding: 30px 0; color: #FFFFFF;}
-
+.footer-content { display: block; width: 690px; margin: 30px auto 0 auto; padding: 30px 0; height: 20px; color: #FFFFFF; position: relative;}
+.footer-content p { text-align: center; width: 100%;}
+.social { position: absolute; right: 0; top: 30px; }
 
 
 /* ==|== non-semantic helper classes ======================================== */
