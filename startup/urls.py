@@ -6,7 +6,7 @@ from django.conf import settings
 from django.contrib import admin
 
 # Pull in class views
-from StartupCincy.pages.views import *
+from startup.pages.views import *
 
 admin.autodiscover()
 
