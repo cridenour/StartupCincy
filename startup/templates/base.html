@@ -7,13 +7,13 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>{% block page_title %}{% trans "StartupCincy.org" %}{% endblock %}</title>
+    <title>{% block page_title %}Connecting Startups in the Ohio Valley | Startup Cincy{% endblock %}</title>
     
     <meta name="description" content="{% block meta_description %}{% endblock %}" />
     <meta name="author" content="{% block meta_author %}{% endblock %}" />
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
     
-    {# TODO: <link rel="shortcut icon" href="{{ STATIC_URL }}images/favicon.ico" /> #}
+    <link rel="shortcut icon" href="{{ STATIC_URL }}images/favicon.ico" />
     {# TODO: <link rel="apple-touch-icon" href="{{ STATIC_URL }}images/apple-touch-icon.png" /> #}
     <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" />
     {% block css %}{% endblock %}
@@ -24,16 +24,33 @@
 <body class="{% block body_class %}{% endblock %}">
 {% block body %}
     <div id="container">
+
         <header>
-            
+            <div class="logo">
+                <img src="{{ STATIC_URL }}images/logo-v1.jpg" />
+            </div>
         </header>
+
+        <nav>
+            <ul>
+                <li><a href="#">Companies</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Jobs</a></li>
+            </ul>
+        </nav>
         
         <div id="main" role="main">
             {% block content %}{% endblock %}
         </div>
         
         <footer>
-            
+            <div class="footer-content">
+                <div class="social">
+                    <a href="http://facebook.com/startupcincy" class="sm-icon facebook">&nbsp;</a>
+                    <a href="http://twitter.com/startupcincy" class="sm-icon twitter">&nbsp;</a>
+                </div>
+                <p>&copy;2012 StartupCincy.com</p>
+            </div>
         </footer>
     </div> <!-- end of #container -->
     

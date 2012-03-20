@@ -7,3 +7,5 @@ django-debug-toolbar==0.8.5
 pycrypto==2.3
 ssh==1.7.8
 wsgiref==0.1.2
+requests
+psycopg2
