@@ -1,19 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
+  <div class="featured-events-wrapper">
     <div class="featured-events slider">
         <div class="slides">
         {% for f in featured %}
-            <div class="slide {% if f.active %}active{% endif %}" id="event-{{ f.id }}">
+            <div class="featured-event slide {% if f.active %}active{% endif %}" id="event-{{ f.id }}">
                 <div class="featured-calendar">
                     <span class="month">{{ f.month }}</span>
                     <span class="day">{{ f.day }}</span>
                     <span class="time">{{ f.time }}</span>
                 </div>
                 <div class="featured-details">
-                    <h2>{{ f.title }}</h2>
+                    <h2><a href="{{ f.link }}">{{ f.title|truncatewords:4 }}</a></h2>
                     <p class="event-host">{{ f.where }}</p>
-                    <p class="event-description">{{ f.description|safe|truncatewords_html:100 }} (see more)</p>
+                    <p class="event-description">{{ f.description|safe|truncatewords_html:60 }}</p>
                 </div>
             </div>
         {% endfor %}
@@ -28,23 +29,24 @@
             </ul>
         </div>
     </div>
+    </div>
 
     <div class="two-column">
         {% for u in upcoming %}
-        <div class="column{% if u.clear %} second{% endif %}">
+        <div class="event column{% if u.clear %} second{% endif %}">
             <div class="event-calendar">
                 <span class="month">{{ u.month }}</span>
                 <span class="day">{{ u.day }}</span>
                 <span class="time">{{ u.time }}</span>
             </div>
             <div class="event-details">
-                <h2>{{ u.title }}</h2>
+                <h2><a href="{{ u.link }}">{{ u.title }}</a></h2>
                 <p class="event-host">{{ u.where }}</p>
-                <p class="event-description">{{ u.description|safe|truncatewords_html:50 }} (see more)</p>
+                <p class="event-description">{{ u.description|safe|truncatewords_html:30 }}</p>
             </div>
         </div>
         {% if u.clear %}
-        <div class="clearfix"></div>
+        <div class="clearfix spacer"></div>
         {% endif %}
         {% endfor %}
     </div>

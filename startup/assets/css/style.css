@@ -93,6 +93,27 @@ td { vertical-align: top; }
 .event-details h2 { font-size: 16px; padding: 0; margin: 0; color: #ed1c24; }
 .event-details .event-host { font-size: 14px; padding: 0; margin: 0; }
 
+.featured-calendar { background: url(../images/calendar_blank.png) no-repeat; background-size: 85px auto; width: 85px; height: 110px; position: relative; float: left;}
+.featured-calendar .month { font-size: 16px; display: block; text-transform: uppercase; color: #ddd2c9; position: absolute; top: 18px; left: 25px;}
+.featured-calendar .day { font-size: 43px; display: block; color: #464647; position: absolute; top: 37px; left: 17px; }
+.featured-calendar .time { font-size: 19px; position: absolute; top: 90px; width: 85px; text-align: center; }
+
+.featured-details { float: left; width: 500px; padding: 0 7px; }
+.featured-details h2 { font-size: 22px; padding: 0; margin: 0; color: #ed1c24; }
+.featured-details .event-host { font-size: 14px; padding: 0; margin: 0; }
+
+.event { height: 165px; }
+.featured-event { height: 140px; }
+.featured-events { height: 150px; background: #f4f4f4; padding: 15px; border: 3px solid #fcb040; border-bottom: none; width: 600px !important; margin: 0 auto !important; }
+.featured-events .slider-controls ul { top: 185px; }
+.featured-events-wrapper { height: 183px; border-bottom: #a1a1a1 2px solid; display:block; margin: 20px 0 50px 0;}
+
+.spacer { margin: 5px 0;}
+
+.featured-details h2 a, .event-details h2 a { color: #ed1c24 !important;}
+.featured-details h2 a:hover, .event-details h2 a:hover { color: #42CEF6 !important;}
+
+
 /* Main styles */
 #container { background: url(../images/bg.png) repeat-x; }
 div.logo { width: 250px; margin: 0 auto; padding: 30px 0; }
@@ -102,7 +123,7 @@ nav { background: url(../images/nav_bg.png) repeat-x; height: 52px; }
 nav ul { list-style: none; width: 385px; margin: 0 auto; }
 nav ul li { float: left; text-align: center; }
 nav ul li a { display: block; padding: 18px 25px 10px 25px; font-size: 17px; line-height: 17px; height: 50px; text-transform: uppercase; }
-nav ul li a:active, nav ul li a:visited, nav ul li a { color: #FFFFFF; text-decoration: none;}
+nav ul li a:active, nav ul li a:visited, nav ul li a, nav ul li a:hover { color: #FFFFFF; text-decoration: none;}
 
 #main { width: 730px; margin: 0 auto; }
 #main a, #main a:visited, #main a:active { color: #42cef6; text-decoration: none; }

@@ -25,6 +25,7 @@ class EventsListing(TemplateView):
                     'day': f.start.strftime('%d'),
                     'time': f.start.strftime('%I:%M%p'),
                     'active': True if len(featured) is 0 else False,
+                    'link' : f.link,
                     'color': self.next_color(),
                 }
             )
@@ -42,6 +43,7 @@ class EventsListing(TemplateView):
                 'month': u.start.strftime('%b'),
                 'day': u.start.strftime('%d'),
                 'time': u.start.strftime('%I:%M%p'),
+                'link' : u.link,
                 'clear': clear
                 }
             )
@@ -50,7 +52,7 @@ class EventsListing(TemplateView):
 
         return {'featured': featured, 'upcoming': upcoming}
 
-    COLORS = ['red', 'orange', 'blue']
+    COLORS = ['blue', 'red', 'orange']
     COLOR_INDEX = 0
 
     def next_color(self):
