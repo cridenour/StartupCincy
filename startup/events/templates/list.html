@@ -40,7 +40,7 @@
                 <span class="time">{{ u.time }}</span>
             </div>
             <div class="event-details">
-                <h2><a href="{{ u.link }}">{{ u.title }}</a></h2>
+                <h2><a href="{{ u.link }}">{{ u.title|truncatewords:4 }}</a></h2>
                 <p class="event-host">{{ u.where }}</p>
                 <p class="event-description">{{ u.description|safe|truncatewords_html:30 }}</p>
             </div>

@@ -98,7 +98,7 @@ td { vertical-align: top; }
 .featured-calendar .day { font-size: 43px; display: block; color: #464647; position: absolute; top: 37px; left: 17px; }
 .featured-calendar .time { font-size: 19px; position: absolute; top: 90px; width: 85px; text-align: center; }
 
-.featured-details { float: left; width: 500px; padding: 0 7px; }
+.featured-details { float: left; width: 500px; padding: 0 15px; }
 .featured-details h2 { font-size: 22px; padding: 0; margin: 0; color: #ed1c24; }
 .featured-details .event-host { font-size: 14px; padding: 0; margin: 0; }
 
