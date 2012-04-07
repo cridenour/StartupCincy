@@ -9,7 +9,7 @@ audio:not([controls]) { display: none; }
 
 html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 body { margin: 0; font-size: 13px; line-height: 1.231; }
-body, button, input, select, textarea { font-family: "Trebuchet MS",sans-serif; color: #464646; }
+body, button, input, select, textarea { font-family: "Arial",sans-serif; color: #464646; }
 
 ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
@@ -83,6 +83,15 @@ td { vertical-align: top; }
 .twitter { background-position: -90px -33px; }
 .twitter:hover { background-position: -90px 0; }
 
+/* Events styling */
+.event-calendar { background: url(../images/calendar_blank_small.png) no-repeat; width: 61px; height: 80px; position: relative; float: left;}
+.event-calendar .month { font-size: 11px; display:block; text-transform: uppercase; color: #ddd2c9; position: absolute; top: 13px; left: 19px; }
+.event-calendar .day { font-size: 29px; display: block; color: #464647; position: absolute; top: 27px; left: 14px; }
+.event-calendar .time { font-size: 12px; position: absolute; top: 65px; width: 61px; text-align: center; }
+
+.event-details { float: left; width: 255px; padding: 0 7px; }
+.event-details h2 { font-size: 16px; padding: 0; margin: 0; color: #ed1c24; }
+.event-details .event-host { font-size: 14px; padding: 0; margin: 0; }
 
 /* Main styles */
 #container { background: url(../images/bg.png) repeat-x; }
@@ -91,8 +100,8 @@ div.logo { width: 250px; margin: 0 auto; padding: 30px 0; }
 
 nav { background: url(../images/nav_bg.png) repeat-x; height: 52px; }
 nav ul { list-style: none; width: 385px; margin: 0 auto; }
-nav ul li { float: left; }
-nav ul li a { display: block; padding: 18px 25px 10px 25px; font-size: 22px; line-height: 22px; height: 50px; text-transform: uppercase; }
+nav ul li { float: left; text-align: center; }
+nav ul li a { display: block; padding: 18px 25px 10px 25px; font-size: 17px; line-height: 17px; height: 50px; text-transform: uppercase; }
 nav ul li a:active, nav ul li a:visited, nav ul li a { color: #FFFFFF; text-decoration: none;}
 
 #main { width: 730px; margin: 0 auto; }
@@ -108,9 +117,9 @@ h1 { color: #ed1c24; font-size: 48px; font-weight: 100; text-align: center; marg
 div.divider { height: 0px; width: 730px; border-top: 2px solid #EDEDED; border-bottom: 4px solid #e1e1e1; }
 
 footer { background: #ed1c24; }
-.footer-content { display: block; width: 690px; margin: 30px auto 0 auto; padding: 30px 0; height: 20px; color: #FFFFFF; position: relative;}
-.footer-content p { text-align: center; width: 100%;}
-.social { position: absolute; right: 0; top: 30px; }
+.footer-content { display: block; width: 690px; margin: 30px auto 0 auto; padding: 30px 0; height: 40px; color: #FFFFFF; position: relative;}
+.footer-content p { text-align: center; width: 100%; clear: both; padding-top: 10px;}
+.social { width: 74px; margin: 0 auto; }
 
 
 /* ==|== non-semantic helper classes ======================================== */

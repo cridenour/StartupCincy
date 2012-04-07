@@ -12,7 +12,7 @@ $(function() {
     } else {
       $('.slider-controls li.active').removeClass('active').next().addClass('active');
     }
-  }, 3000);
+  }, 5000);
 
   $('.slider-controls li a').click(function(e) {
     $('.slider .slides .active').fadeOut();

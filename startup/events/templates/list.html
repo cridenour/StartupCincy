@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="featured-events slider">
+        <div class="slides">
+        {% for f in featured %}
+            <div class="slide {% if f.active %}active{% endif %}" id="event-{{ f.id }}">
+                <div class="featured-calendar">
+                    <span class="month">{{ f.month }}</span>
+                    <span class="day">{{ f.day }}</span>
+                    <span class="time">{{ f.time }}</span>
+                </div>
+                <div class="featured-details">
+                    <h2>{{ f.title }}</h2>
+                    <p class="event-host">{{ f.where }}</p>
+                    <p class="event-description">{{ f.description|safe|truncatewords_html:100 }} (see more)</p>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+        <div class="slider-controls">
+            <ul>
+                {% for f in featured %}
+                <li class="{% if f.active %}active{% endif %}">
+                    <a class="{{ f.color }}" href="#" data-for="event-{{ f.id }}">&nbsp;</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="two-column">
+        {% for u in upcoming %}
+        <div class="column{% if u.clear %} second{% endif %}">
+            <div class="event-calendar">
+                <span class="month">{{ u.month }}</span>
+                <span class="day">{{ u.day }}</span>
+                <span class="time">{{ u.time }}</span>
+            </div>
+            <div class="event-details">
+                <h2>{{ u.title }}</h2>
+                <p class="event-host">{{ u.where }}</p>
+                <p class="event-description">{{ u.description|safe|truncatewords_html:50 }} (see more)</p>
+            </div>
+        </div>
+        {% if u.clear %}
+        <div class="clearfix"></div>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="clearfix"></div>
+
+{% endblock %}

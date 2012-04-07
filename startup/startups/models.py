@@ -22,7 +22,7 @@ class Company(models.Model):
         return u'http://www.crunchbase.com/company/' + self.permalink
 
     def update(self):
-        cb = getCompany(permalink)
+        cb = getCompany(self.permalink)
 
         self.name = cb[u'name']
         self.permalink = cb[u'permalink']
@@ -45,7 +45,7 @@ class Company(models.Model):
         img_temp.write(urllib2.urlopen(logo_url).read())
         img_temp.flush()
 
-        self.logo.save(permalink + '.jpg', File(img_temp))
+        self.logo.save(self.permalink + '.jpg', File(img_temp))
 
         self.save()
 
