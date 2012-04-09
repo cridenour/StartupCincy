@@ -9,7 +9,7 @@ class Migration(SchemaMigration):
     def forwards(self, orm):
         
         # Adding field 'Job.startup'
-        db.add_column('jobs_job', 'startup', self.gf('django.db.models.fields.related.ForeignKey')(default='', related_name='jobs', blank=True, to=orm['startups.Company']), keep_default=False)
+        db.add_column('jobs_job', 'startup', self.gf('django.db.models.fields.related.ForeignKey')(default=0, related_name='jobs', blank=True, to=orm['startups.Company']), keep_default=False)
 
 
     def backwards(self, orm):
