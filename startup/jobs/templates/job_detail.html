@@ -3,15 +3,8 @@
 {% block page_class %}job-details{% endblock %}
 
 {% block content %}
-<div id="job-{{ job.id }}-details">
+<div class="job-detail">
     {{ job.description }}
 </div>
 <h3>Apply</h3>
-<script type=”IN/Apply”
-    data-companyName="{{ job.company }}"
-    data-jobTitle="{{ job.title }}"
-    data-jobLocation="{{ job.location }}"
-    data-email="chris.ridenour@rockfishinteractive.com"
-    phone="required">
-</script>
 {% endblock %}

@@ -26,13 +26,19 @@ def createCompany(permalink):
     c.overview = cb[u'overview']
 
     # Download logo, store it.
-    logo_url = u'http://www.crunchbase.com/' + cb[u'image'][u'available_sizes'][0][1]
 
-    img_temp = NamedTemporaryFile()
-    img_temp.write(urllib2.urlopen(logo_url).read())
-    img_temp.flush()
 
-    c.logo.save(permalink + '.jpg', File(img_temp))
+    try:
+        logo_url = u'http://www.crunchbase.com/' + cb[u'image'][u'available_sizes'][0][1]
+
+        img_temp = NamedTemporaryFile()
+        img_temp.write(urllib2.urlopen(logo_url).read())
+        img_temp.flush()
+
+        c.logo.save(permalink + '.jpg', File(img_temp))
+
+    except:
+        pass
 
     c.save()
 
@@ -47,4 +53,23 @@ def createCompany(permalink):
 
             cp.save()
 
+from django.conf import settings
+import os
+import re
+from csv import DictReader
+def runImport(filename):
+    import_folder = os.path.join(settings.PROJECT_PATH, 'startups/imports/')
 
+    file = open(os.path.join(import_folder, filename))
+    data = DictReader(file)
+
+    for company in data:
+        if str(company.get('CrunchBase')) is not '':
+            cbase = str(company.get('CrunchBase'))
+            res = re.search(r'http:\/\/www.crunchbase.com\/company\/(.+)', cbase)
+
+            if res is not None:
+                perma = res.group(1)
+
+                if len(Company.objects.filter(permalink=perma)) < 1:
+                    createCompany(perma)

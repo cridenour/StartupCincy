@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="startups">
+{% for s in startups %}
+    <div class="startup">
+        <h3><a href="{{ s.get_permalink }}">{{ s.name }}</a></h3>
+        {% if s.founded %}
+        <span class="founded">Founded in {{ s.founded }}</span>
+        {% endif %}
+        <div class="startup-logo">
+            <a href="{{ s.get_permalink }}">
+            {% if s.logo %}
+            <img src="{{ s.logo.url }}" />
+            {% else %}
+            <img src="http://placekitten.com/150/90" />
+            {% endif %}
+            </a>
+        </div>
+    </div>
+{% endfor %}
+</div>
+<div class="clearfix"></div>
+{% endblock %}

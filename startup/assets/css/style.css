@@ -113,6 +113,32 @@ td { vertical-align: top; }
 .featured-details h2 a, .event-details h2 a { color: #ed1c24 !important;}
 .featured-details h2 a:hover, .event-details h2 a:hover { color: #42CEF6 !important;}
 
+/* Startup Styles */
+.startups { width: 720px; margin: 0 auto; }
+.startup { width: 240px; float: left; height: 220px;}
+.startup .startup-logo { height: 150px; width: 150px; margin: 10px auto; }
+.startup h3 { margin: 0; }
+.startup .founded { font-style: italic; }
+
+.sidebar { width: 160px; padding: 0 20px; float: left; }
+.startup-detail { width: 530px; float: left; position: relative; padding-bottom: 30px;}
+.detail-logo { width: 150px; margin: 10px auto; }
+
+.sidebar .detail { margin: 5px 0;}
+.sidebar .founded { font-style: italic;}
+.sidebar h3 {margin: 5px 0; }
+.sidebar .contact-info {margin: 30px 0;}
+
+.people .name { font-weight: bold; display: block;}
+.people .title { font-style: italic; display: block;}
+
+.crunchbase-link {position: absolute; right: 0; bottom: 0; }
+
+/* Jobs styles */
+.orange-white { background: #fcb040; color: #fff; }
+.orange-white h2 {color: #fff;}
+
+.job-board { width: 530px; float: left; position: relative; padding-bottom: 30px;}
 
 /* Main styles */
 #container { background: url(../images/bg.png) repeat-x; }

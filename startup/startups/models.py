@@ -52,6 +52,9 @@ class Company(models.Model):
     def __unicode__(self):
         return "%s" % self.name
 
+    def get_permalink(self):
+        return "/startup/%s" % self.permalink
+
     class Meta:
         verbose_name_plural = "Companies"
 
