@@ -138,7 +138,7 @@ td { vertical-align: top; }
 .orange-white { background: #fcb040; color: #fff; }
 .orange-white h2 {color: #fff;}
 
-.job-board { width: 530px; float: left; position: relative; padding-bottom: 30px;}
+.job-board { width: 510px; float: left; position: relative; padding: 0 0 30px 20px;}
 
 /* Main styles */
 #container { background: url(../images/bg.png) repeat-x; }
