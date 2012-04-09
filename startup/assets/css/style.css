@@ -114,11 +114,24 @@ td { vertical-align: top; }
 .featured-details h2 a:hover, .event-details h2 a:hover { color: #42CEF6 !important;}
 
 /* Startup Styles */
-.startups { width: 720px; margin: 0 auto; }
-.startup { width: 240px; float: left; height: 220px;}
-.startup .startup-logo { height: 150px; width: 150px; margin: 10px auto; }
-.startup h3 { margin: 0; }
+.startups { width: 720px; margin: 0 auto; position: relative; }
+.startup { width: 240px; float: left; height: 170px; text-align: center; margin-top: 20px;}
+.startup .logo-wrapper { height: 110px; width: 150px; margin: 10px auto; }
+.startup .startup-logo { height: 110px; width: 150px; display: table-cell; text-align: center; vertical-align: middle; }
+.startup .startup-logo * { vertical-align: middle;}
+/*\*//*/
+.startup .startup-logo {
+    display: block;
+}
+.startup .startup-logo span {
+    display: inline-block;
+    height: 100%;
+    width: 1px;
+}
+/**/
+.startup h3 { margin: 0;}
 .startup .founded { font-style: italic; }
+.startups .divider {position: absolute; left: 150px; width: 430px; }
 
 .sidebar { width: 160px; padding: 0 20px; float: left; }
 .startup-detail { width: 530px; float: left; position: relative; padding-bottom: 30px;}

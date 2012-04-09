@@ -8,7 +8,9 @@
         {% if s.founded %}
         <span class="founded">Founded in {{ s.founded }}</span>
         {% endif %}
+        <div class="logo-wrapper">
         <div class="startup-logo">
+            <span></span>
             <a href="{{ s.get_permalink }}">
             {% if s.logo %}
             <img src="{{ s.logo.url }}" />
@@ -17,6 +19,11 @@
             {% endif %}
             </a>
         </div>
+        </div>
+        {% if forloop.counter|divisibleby:"3" %}
+            <div class="clearfix"></div>
+            <div class="divider"></div>
+        {% endif %}
     </div>
 {% endfor %}
 </div>
