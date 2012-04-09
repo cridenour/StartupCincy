@@ -1,4 +1,3 @@
 *.pyc
 *.db
 .idea/*
-startup/media/*

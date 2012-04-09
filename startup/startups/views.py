@@ -9,7 +9,9 @@ class Startups(TemplateView):
     template_name = 'list_companies.html'
 
     def get_context_data(self, **kwargs):
-        startups = Company.objects.all().order_by('-founded')
+        startups = Company.objects.all()
+        startups = startups.extra(select={'null1': 'founded is null'})
+        startups = startups.extra(order_by=['null1', '-founded'])
 
         return {'startups': startups}
 
