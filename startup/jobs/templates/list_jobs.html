@@ -7,9 +7,27 @@
 </div>
 <div class="job-board">
     <div class="jobs">
+        {% if not jobs %}
+        <p>There are currently no startup job openings.</p>
+        {% endif %}
         {% for j in jobs %}
-        <div class="job">
-            {{ j.title }} at {{ j.company }}
+        <div class="job {% cycle 'odd' 'even' %} {% if forloop.last %}last{% endif %}">
+            {% if j.startup and j.startup.logo %}
+                <div class="job-list-logo">
+                    <a href="{{ j.get_absolute_url }}"><img src="{{ j.startup.logo.url }}" /></a>
+                </div>
+            {% else %}
+            {% if j.logo %}
+                <div class="job-list-logo">
+                    <a href="{{ j.get_absolute_url }}"><img src="{{ j.logo.url }}" /></a>
+                </div>
+            {% endif %}
+            {% endif %}
+            <div class="job-details">
+            <h3><a href="{{ j.get_absolute_url }}">{{ j.title }}</a></h3>
+            <span class="job-company">{% if j.startup %}<a href="{{ j.startup.get_permalink }}">{{ j.startup.name }}</a>{% else %}{{ j.company }}{% endif %}</span>
+            </div>
+            <div class="clearfix"></div>
         </div>
         {% endfor %}
     </div>

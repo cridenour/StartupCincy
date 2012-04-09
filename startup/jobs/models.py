@@ -14,7 +14,11 @@ class Job(models.Model):
     responsibilities = models.TextField()
     requirements = models.TextField()
     apply_link = models.URLField(max_length=255)
+    logo = models.FileField(null=True, default=None, blank=True, upload_to='job_logos')
 
     def __unicode__(self):
         return "%s at %s (%s)" % (self.title, self.company, self.location)
+
+    def get_absolute_url(self):
+        return "job/%i" % self.id
     

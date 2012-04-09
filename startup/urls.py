@@ -22,6 +22,7 @@ urlpatterns = patterns('',
     url(r'^startup/(?P<permalink>.+)$',Startup.as_view()),
 
     url(r'^jobs$', JobList.as_view()),
+    url(r'^job/(?P<id>\d+)$',JobDetail.as_view()),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

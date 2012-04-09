@@ -139,6 +139,23 @@ td { vertical-align: top; }
 .orange-white h2 {color: #fff;}
 
 .job-board { width: 510px; float: left; position: relative; padding: 0 0 30px 20px;}
+.job {padding: 10px 20px; border-bottom: 1px solid #a1a1a1; }
+.job.last {border: none;}
+.job-company { font-style: italic;}
+.job h3 {padding: 0; margin: 0;}
+.job h3 a { color: #ed1c24 !important;}
+.job-list-logo { height: 50px; width: 80px; float: left;}
+.job-list-logo img { height: 40px; max-width: 80px; margin: 5px auto; }
+.job-details { height: 50px; float: left; margin-left: 20px; }
+
+.job-detail { width: 530px; float: left; position: relative; padding-bottom: 30px;}
+.job-detail h2 { font-size: 22px; }
+.job-logo { width: 150px; margin: 10px auto; }
+.job-logo img { width: 150px;}
+
+.company-info, .posting-info { margin: 20px 0;}
+.posting-info .updated {font-style: italic;}
+#apply-button { display: block; width: 110px; padding: 15px 20px; background: #fcb040; border-radius: 10px; color: #ffffff !important; text-align: center; font-weight: bold; font-size: 16px;}
 
 /* Main styles */
 #container { background: url(../images/bg.png) repeat-x; }

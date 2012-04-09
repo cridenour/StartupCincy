@@ -1,10 +1,53 @@
 {% extends 'base.html' %}
 
-{% block page_class %}job-details{% endblock %}
-
 {% block content %}
-<div class="job-detail">
-    {{ job.description }}
-</div>
-<h3>Apply</h3>
+    <div class="sidebar">
+        {% if job.startup and job.startup.logo %}
+        <div class="job-logo">
+            <img src="{{ job.startup.logo.url }}" />
+        </div>
+        {% else %}
+             {% if job.logo %}
+                 <div class="job-logo">
+                     <img src="{{ job.logo.url }}" />
+                 </div>
+             {% endif %}
+        {% endif %}
+        <div class="apply-here">
+            <a id="apply-button" href="{{ job.apply_link }}">
+                Apply Here
+            </a>
+        </div>
+        <div class="company-info">
+            <h3>Company Info</h3>
+            <div class="detail">
+                {{ job.company }}
+            </div>
+            <div class="detail">
+                <a href="{{ job.company_website }}">Website</a>
+            </div>
+        </div>
+        <div class="posting-info">
+            <h3>About this Posting</h3>
+            <div class="detail posted">
+                Posted on {{ job.post_date|date }}
+            </div>
+            <div class="detail updated">
+                Updated {{ job.last_updated|date }}
+            </div>
+        </div>
+    </div>
+
+
+    <div class="job-detail">
+        <h2>{{ job.title }}</h2>
+        <h3>Description</h3>
+        {{ job.description|safe }}
+        <h3>Responsibilities</h3>
+        {{ job.responsibilities|safe }}
+        <h3>Requirements</h3>
+        {{ job.requirements|safe }}
+    </div>
+
+    <div class="clearfix"></div>
 {% endblock %}
