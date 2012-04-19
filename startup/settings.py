@@ -63,7 +63,7 @@ STATIC_URL = '/static/'
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
 # Examples: "http://foo.com/static/admin/", "/static/admin/".
-ADMIN_MEDIA_PREFIX = '/static/admin/'
+ADMIN_MEDIA_PREFIX = STATIC_URL + 'grappelli/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -110,12 +110,19 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'grappelli',
     'django.contrib.admin',
     'south',
     'startups',
     'events',
     'jobs',
 )
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.postmarkapp.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = '72a07361-9389-407b-8f92-202467325fd6'
+EMAIL_HOST_PASSWORD = '72a07361-9389-407b-8f92-202467325fd6'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

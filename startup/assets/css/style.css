@@ -176,10 +176,12 @@ div.logo { width: 250px; margin: 0 auto; padding: 30px 0; }
 
 
 nav { background: url(../images/nav_bg.png) repeat-x; height: 52px; }
-nav ul { list-style: none; width: 385px; margin: 0 auto; }
+nav ul { list-style: none; width: 475px; margin: 0 auto; }
 nav ul li { float: left; text-align: center; }
 nav ul li a { display: block; padding: 18px 25px 10px 25px; font-size: 17px; line-height: 17px; height: 50px; text-transform: uppercase; }
 nav ul li a:active, nav ul li a:visited, nav ul li a, nav ul li a:hover { color: #FFFFFF; text-decoration: none;}
+
+.img-wrapper {width: 690px; margin: 0 auto;}
 
 #main { width: 730px; margin: 0 auto; }
 #main a, #main a:visited, #main a:active { color: #42cef6; text-decoration: none; }

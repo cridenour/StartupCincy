@@ -9,6 +9,7 @@ from django.contrib import admin
 from startup.startups.views import *
 from startup.events.views import *
 from startup.jobs.views import *
+from django.views.generic import TemplateView
 
 admin.autodiscover()
 
@@ -24,10 +25,11 @@ urlpatterns = patterns('',
     url(r'^jobs$', JobList.as_view()),
     url(r'^job/(?P<id>\d+)$',JobDetail.as_view()),
 
-    # Uncomment the admin/doc line below to enable admin documentation:
-    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    url(r'^about$', TemplateView.as_view(template_name='about.html')),
 
-    # Uncomment the next line to enable the admin:
+    url(r'^email-test', TemplateView.as_view(template_name='email.html')),
+
+    url(r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/', include(admin.site.urls)),
 
 
