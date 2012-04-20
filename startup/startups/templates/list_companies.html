@@ -28,4 +28,9 @@
 {% endfor %}
 </div>
 <div class="clearfix"></div>
+{% if not startups|length|divisibleby:"3" %}
+    <div class="clearfix"></div>
+    <div class="divider"></div>
+{% endif %}
+<div class="add"></div>
 {% endblock %}

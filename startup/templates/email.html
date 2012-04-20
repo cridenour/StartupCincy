@@ -31,38 +31,24 @@
 				</table><!-- header-->
 				<table cellpadding="0" cellspacing="0" border="0" align="center" width="599" style="font-family: Georgia, serif;" >
 			      <tr>
-			        <td width="599" valign="top" align="left" bgcolor="#ffffff"style="font-family: Georgia, serif; background: #fff; border-top: 5px solid #ededed">
+			        <td width="599" valign="top" align="left" bgcolor="#ffffff"style="font-family: Georgia, serif; background: #fff; background: url({{ STATIC_URL }}images/bg.png) repeat-x;">
 						<table cellpadding="0" cellspacing="0" border="0"  style="color: #717171; font: normal 11px Georgia, serif; margin: 0; padding: 0;" width="599">
 						<tr>
 							<td width="15" style="font-size: 1px; line-height: 1px; width: 15px;"><img src="{{ STATIC_URL }}images/email/spacer.gif" alt="space" width="15"></td>
 							<td style="padding: 15px 0 5px; font-family: Georgia, serif;" valign="top" align="center" width="569">
-								<h3 style="color:#ed1c24; font-weight: bold; text-transform: uppercase; margin: 0; padding: 0; line-height: 22px; font-size: 10px;">Monday, April 31, 2012</h3>
+								<h3 style="color:#ed1c24; font-weight: bold; text-transform: uppercase; margin: 0; padding: 0; line-height: 22px; font-size: 10px;">{% block date %}Monday, April 31, 2012{% endblock %}</h3>
 							</td>
 							<td width="15" style="font-size: 1px; line-height: 1px; width: 15px;"><img src="{{ STATIC_URL }}images/email/spacer.gif" alt="space" width="15"></td>
 						</tr>
 						<tr>
 							<td width="15" style="font-size: 1px; line-height: 1px; width: 15px;"><img src="{{ STATIC_URL }}images/email/spacer.gif" alt="space" width="15"></td>
 							<td style="padding: 10px 0 0; font-family: Helvetica, Arial, sans-serif;" align="left">			
-								<h2 style="color:#393023 !important; font-weight: bold; margin: 0; padding: 0; line-height: 30px; font-size: 17px;font-family: Helvetica, Arial, sans-serif;">Meet Jack — a brown cow.</h2>
+								<h2 style="color:#393023 !important; font-weight: bold; margin: 0; padding: 0; line-height: 30px; font-size: 17px;font-family: Helvetica, Arial, sans-serif;">{% block title1 %}The greatest title of all time.{% endblock %}</h2>
 								<p style="color:#767676; font-weight: normal; margin: 0; padding: 0; line-height: 20px; font-size: 12px;">
-									Suspendisse potenti--Fusce eu ante in sapien vestibulum sagittis. Cras purus. Nunc rhoncus. <a href="#" style="color: #0fa2e6; text-decoration: none;">Donec imperdiet</a>, nibh sit amet pharetra placerat, tortor purus condimentum lectus.
+									 {% block content1 %}Lore ipsum dolf zed afrika{% endblock %}
 								</p>
 							</td>
 							<td width="15" style="font-size: 1px; line-height: 1px; width: 15px;"><img src="{{ STATIC_URL }}images/email/spacer.gif" alt="space" width="15"></td>
-						</tr>
-						<tr>
-							<td width="15" style="font-size: 1px; line-height: 1px; width: 15px;"><img src="{{ STATIC_URL }}images/email/spacer.gif" alt="space" width="15"></td>
-							<td style="padding: 10px 0 0; font-family: Helvetica, Arial, sans-serif;" align="left">		
-								<img src="{{ STATIC_URL }}images/email/img.jpg" alt="Cow" style="border: 5px solid #f7f7f4;">
-							</td>
-						</tr>
-						<tr>
-							<td width="15" style="font-size: 1px; line-height: 1px; width: 15px;"><img src="{{ STATIC_URL }}images/email/spacer.gif" alt="space" width="15"></td>
-							<td style="padding: 10px 0 0; font-family: Helvetica, Arial, sans-serif;" align="left">			
-								<p style="color:#767676; font-weight: normal; margin: 0; padding: 0; line-height: 20px; font-size: 12px;">
-									Suspendisse potenti--Fusce eu <a href="#" style="color: #0fa2e6; text-decoration: none;">ante in sapien</a> vestibulum sagittis.
-								</p>
-							</td>
 						</tr>
 						<tr>
 							<td width="15" style="font-size: 1px; line-height: 1px; width: 15px;"><img src="{{ STATIC_URL }}images/email/spacer.gif" alt="space" width="15"></td>
@@ -74,11 +60,9 @@
 						<tr>
 							<td width="15" style="font-size: 1px; line-height: 1px; width: 15px;"><img src="{{ STATIC_URL }}images/email/spacer.gif" alt="space" width="15"></td>
 							<td style="padding: 10px 0 55px; font-family: Helvetica, Arial, sans-serif;" align="left">			
-								<h2 style="color:#393023 !important; font-weight: bold; margin: 0; padding: 0; line-height: 30px; font-size: 17px;font-family: Helvetica, Arial, sans-serif;">Cookies feels more valuable now 
-								than before</h2>
+								<h2 style="color:#393023 !important; font-weight: bold; margin: 0; padding: 0; line-height: 30px; font-size: 17px;font-family: Helvetica, Arial, sans-serif;">{% block title2 %}Here is a second title! {% endblock %}</h2>
 								<p style="color:#767676; font-weight: normal; margin: 0; padding: 0; line-height: 20px; font-size: 12px;">
-									Suspendisse potenti--Fusce eu ante in sapien vestibulum sagittis. Cras purus. Nunc rhoncus. Donec imperdiet, nibh sit amet pharetra placerat, tortor purus condimentum lectus. Says Doctor Lichtenstein in an interview done after last nights press conference in Belgium.
-									<a href="#" style="color: #0fa2e6; text-decoration: none;">Dr. Lichtenstein</a> also states his concerns regarding chocolate now suddenly turning yellow the last couple of years. 
+									{% block content2 %}I WANT A CUPCAKE{% endblock %}
 								</p>
 							</td>
 						</tr>  
@@ -92,8 +76,8 @@
 				<table cellpadding="0" cellspacing="0" border="0" align="center" width="599" style="font-family: Georgia, serif; line-height: 10px;" bgcolor="#464646" class="footer">
 			      <tr>
 			        <td bgcolor="#464646"  align="center" style="padding: 15px 0 10px; font-size: 11px; color:#bfbfbf; margin: 0; line-height: 1.2;font-family: Helvetica, Arial, sans-serif;" valign="top">
-						<p style="font-size: 11px; color:#bfbfbf; margin: 0; padding: 0;font-family: Helvetica, Arial, sans-serif;">You're receiving this newsletter because you bought widgets from us. </p>
-						<p style="font-size: 11px; color:#bfbfbf; margin: 0 0 10px 0; padding: 0;font-family: Helvetica, Arial, sans-serif;">Having trouble reading this? <webversion style="color: #0fa2e6; text-decoration: none;">View it in your browser</webversion>. Not interested anymore? <unsubscribe style="color: #0fa2e6; text-decoration: none;">Unsubscribe</unsubscribe> Instantly.</p>
+						<p style="font-size: 11px; color:#bfbfbf; margin: 0; padding: 0;font-family: Helvetica, Arial, sans-serif;">You're receiving this email because you are listed as an interested party of StartupCincy. </p>
+						<p style="font-size: 11px; color:#bfbfbf; margin: 0 0 10px 0; padding: 0;font-family: Helvetica, Arial, sans-serif;"><a href="mailto:chrisridenour@gmail.com?subject=Unsubscribe+From+StartupCincy" style="color: #0fa2e6; text-decoration: none;">Unsubscribe</a> from future emails.</p>
 					</td>
 			      </tr>
 				  <tr> 
