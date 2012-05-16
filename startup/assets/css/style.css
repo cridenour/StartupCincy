@@ -197,7 +197,7 @@ nav ul li a:active, nav ul li a:visited, nav ul li a, nav ul li a:hover { color:
 
 div.slider { width: 690px; margin: 40px auto; }
 
-#main div.two-column h2 { color: #ed1c24; font-size: 35px; line-height: 30px; font-weight: 100; margin: 0; }
+body.home #main div.two-column h2 { color: #ed1c24; font-size: 35px; line-height: 30px; font-weight: 100; margin: 0; }
 h1 { color: #ed1c24; font-size: 53px; font-weight: 100; margin: 0; }
 #main div.two-column { width: 690px; margin: 10px auto; }
 #main div.two-column div.column { width: 330px; float: left; }
