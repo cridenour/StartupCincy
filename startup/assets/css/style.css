@@ -70,7 +70,7 @@ td { vertical-align: top; }
 .slider .slider-controls ul { position: absolute; top: 220px; list-style: none; padding: 0; margin: 0;}
 .slider .slider-controls ul li { float: left; }
 .slider .slider-controls ul li a { border: 1px solid #000000; border-radius: 5px; display: block; background: #000; width: 5px; height: 5px; margin: 0 5px;}
-.slider .slider-controls ul li a.red {border-color: #ed1c24; background: #ed1c24;}
+.slider .slider-controls ul li a.red {border-color: #ed1c24; background: #term;}
 .slider .slider-controls ul li a.orange {border-color: #fcb040; background: #fcb040;}
 .slider .slider-controls ul li a.blue {border-color: #00aeef; background: #00aeef;}
 .slider .slider-controls ul li.active a { background: #FFFFFF; }
