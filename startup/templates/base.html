@@ -17,7 +17,7 @@
     {# TODO: <link rel="apple-touch-icon" href="{{ STATIC_URL }}images/apple-touch-icon.png" /> #}
     <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css?v=5b" />
     {% block css %}{% endblock %}
-    
+
     <script src="{{ STATIC_URL }}js/libs/modernizr-2.0.6.min.js"></script>
 </head>
 
@@ -49,6 +49,7 @@
                 <div class="social">
                     <a href="http://facebook.com/startupcincy" class="sm-icon facebook">&nbsp;</a>
                     <a href="http://twitter.com/startupcincy" class="sm-icon twitter">&nbsp;</a>
+                    <div class="clearfix"></div>
                 </div>
                 <p>&copy;2012 StartupCincy.com</p>
             </div>
@@ -78,5 +79,6 @@
         <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
     <![endif]-->
 {% endblock %}
+<div class="clearfix"></div>
 </body>
 </html>
