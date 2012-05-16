@@ -2,6 +2,9 @@
 
 {% block content %}
 <div class="startups">
+    <div class="add">
+        <a href="/startups/add">Add Your Company</a>
+    </div>
 {% for s in startups %}
     <div class="startup">
         <h3><a href="{{ s.get_permalink }}">{{ s.name }}</a></h3>
@@ -32,5 +35,5 @@
     <div class="clearfix"></div>
     <div class="divider"></div>
 {% endif %}
-<div class="add"></div>
+
 {% endblock %}

@@ -70,7 +70,7 @@ td { vertical-align: top; }
 .slider .slider-controls ul { position: absolute; top: 220px; list-style: none; padding: 0; margin: 0;}
 .slider .slider-controls ul li { float: left; }
 .slider .slider-controls ul li a { border: 1px solid #000000; border-radius: 5px; display: block; background: #000; width: 5px; height: 5px; margin: 0 5px;}
-.slider .slider-controls ul li a.red {border-color: #ed1c24; background: #term;}
+.slider .slider-controls ul li a.red {border-color: #ed1c24; background: #ed1c24;}
 .slider .slider-controls ul li a.orange {border-color: #fcb040; background: #fcb040;}
 .slider .slider-controls ul li a.blue {border-color: #00aeef; background: #00aeef;}
 .slider .slider-controls ul li.active a { background: #FFFFFF; }
@@ -133,6 +133,15 @@ td { vertical-align: top; }
 .startup .founded { font-style: italic; }
 .startups .divider {position: absolute; left: 150px; width: 430px; }
 
+.event-list { position: relative;}
+.event-list .add { top: -40px; }
+
+.job-board .add { top: -10px;}
+
+.add { background: url(../images/plus-button.png) no-repeat; height: 24px; color: #464646; width: 115px; position: absolute; top: 10px; right: 0; padding: 4px 0 0 28px;}
+
+#main .add a, #main .add a:visited, #main .add a:active { color: #464646; }
+
 .sidebar { width: 160px; padding: 0 20px; float: left; }
 .startup-detail { width: 530px; float: left; position: relative; padding-bottom: 30px;}
 .detail-logo { width: 150px; margin: 10px auto; }
@@ -151,7 +160,7 @@ td { vertical-align: top; }
 .orange-white { background: #fcb040; color: #fff; }
 .orange-white h2 {color: #fff;}
 
-.job-board { width: 510px; float: left; position: relative; padding: 0 0 30px 20px;}
+.job-board { width: 510px; float: left; position: relative; padding: 0px 0 30px 20px;}
 .job {padding: 10px 20px; border-bottom: 1px solid #a1a1a1; }
 .job.last {border: none;}
 .job-company { font-style: italic;}
@@ -192,6 +201,8 @@ h1 { color: #ed1c24; font-size: 48px; font-weight: 100; text-align: center; marg
 #main div.two-column { width: 690px; margin: 10px auto; }
 #main div.two-column div.column { width: 330px; float: left; }
 #main div.two-column div.column.second { margin-left: 30px; }
+
+.twtr-doc { margin: 0 auto 20px auto; }
 
 div.divider { height: 0px; width: 730px; border-top: 2px solid #EDEDED; border-bottom: 4px solid #e1e1e1; }
 

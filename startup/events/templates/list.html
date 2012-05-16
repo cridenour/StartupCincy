@@ -31,7 +31,10 @@
     </div>
     </div>
 
-    <div class="two-column">
+    <div class="two-column event-list">
+        <div class="add">
+            <a href="/events/add">Add Your Event</a>
+        </div>
         {% for u in upcoming %}
         <div class="event column{% if u.clear %} second{% endif %}">
             <div class="event-calendar">

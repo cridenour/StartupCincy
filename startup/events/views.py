@@ -84,7 +84,7 @@ class FindNewEvents(View):
                     event.title = e.get('name')
                     event.description = e.get('description')
                     event.start = datetime.fromtimestamp(float(e.get('time')) / 1000)
-                    event.where = ', '.join([e.get('venue').get('name'), e.get('venue').get('address_1'), e.get('venue').get('zip')])
+                    event.where = ', '.join([e.get('venue').get('name'), e.get('venue').get('address_1'), e.get('venue').get('zip')]) if e.get('venue') else 'No Location'
                     event.who = e.get('group').get('name')
                     event.meetup_id = e.get('id')
                     event.link = e.get('event_url')
