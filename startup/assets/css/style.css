@@ -197,11 +197,13 @@ nav ul li a:active, nav ul li a:visited, nav ul li a, nav ul li a:hover { color:
 
 div.slider { width: 690px; margin: 40px auto; }
 
-h1 { color: #ed1c24; font-size: 48px; font-weight: 100; text-align: center; margin: 0; }
+h2 { color: #ed1c24; font-size: 35px; line-height: 30px; font-weight: 100; margin: 0; }
+h1 { color: #ed1c24; font-size: 53px; font-weight: 100; margin: 0; }
 #main div.two-column { width: 690px; margin: 10px auto; }
 #main div.two-column div.column { width: 330px; float: left; }
 #main div.two-column div.column.second { margin-left: 30px; }
 
+.twitter { height: 300px; padding: 20px 0 0 0; }
 .twtr-doc { margin: 0 auto 20px auto; }
 
 div.divider { height: 0px; width: 730px; border-top: 2px solid #EDEDED; border-bottom: 4px solid #e1e1e1; }
