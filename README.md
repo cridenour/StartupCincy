@@ -6,8 +6,8 @@ This site is being ported from a simple Django site powered by Crunchbase and Me
 Major features
 --------------
 
-*Events
-*Startups
-*Incubators
-*Angels
-*VCs
+* Events
+* Startups
+* Incubators
+* Angels
+* VCs
