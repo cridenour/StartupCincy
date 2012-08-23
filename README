@@ -1,16 +1,13 @@
-testing.
+Startup Cincy
+=============
 
-writing requirements into the readme for further information
+This site is being ported from a simple Django site powered by Crunchbase and Meetup to a nodejs site powered by AngelList and Meetup - to be hosted by the wonderful [Modulus.io](http://modulus.io). 
 
-site will show:
+Major features
+--------------
 
-events
-news
-startups
-incubators
-angels
-vcs
-
-function as a hub for information
-
-drive action, collaboration and coding, lots and lots of coding.
+*Events
+*Startups
+*Incubators
+*Angels
+*VCs
