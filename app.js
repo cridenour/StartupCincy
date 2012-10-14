@@ -6,7 +6,8 @@
 var express = require('express')
   , routes = require('./routes')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , lessMiddleware = require('less-middleware');
 
 var app = express();
 
@@ -19,7 +20,7 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
-  app.use(require('stylus').middleware(__dirname + '/public'));
+  app.use(lessMiddleware({src: __dirname + '/public', compress: false }));
   app.use(express.static(path.join(__dirname, 'public')));
 });
 
@@ -28,6 +29,7 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
+app.get('/about', routes.about);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
