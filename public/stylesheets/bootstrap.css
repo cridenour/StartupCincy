@@ -4730,8 +4730,9 @@ a.badge:hover {
   line-height: 30px;
   color: inherit;
 }
-p.startup {
-  color: pink;
+div.header .logo {
+  margin: 0 auto;
+  width: 255px;
 }
 .pull-right {
   float: right;

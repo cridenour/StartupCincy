@@ -4,7 +4,7 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'StartupCincy' });
+  res.render('index', { title: 'StartupCincy', STATIC_URL: 'http://startupcincy.com/static/' });
 };
 
 exports.about = function(req, res) {
