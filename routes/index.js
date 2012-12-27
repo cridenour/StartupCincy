@@ -3,8 +3,11 @@
  * GET home page.
  */
 
+
 exports.index = function(req, res){
-  res.render('index', { title: 'StartupCincy', STATIC_URL: 'http://startupcincy.com/static/' });
+  name = false;
+  if (req.user) { name = req.user.name; }
+  res.render('index', { title: 'StartupCincy', STATIC_URL: '/', name: name });
 };
 
 exports.about = function(req, res) {

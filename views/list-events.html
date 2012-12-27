@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for e in events %}
+  <h2>{{ e.summary }}</h2>
+  <p>{{ e.start.dateTime }}</p>
+{% endfor %}
+{% endblock %}

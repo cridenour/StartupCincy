@@ -7,35 +7,37 @@
     <meta name="description" content="{% block meta_description %}{% endblock %}" />
     <meta name="author" content="{% block meta_author %}{% endblock %}" />
 
-    <link rel="stylesheet" href="./stylesheets/bootstrap.css" /> 
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css" /> 
 </head>
 
 <body class="{% block body_class %}{% endblock %}">
-    <div class="container">
-        <div class="row">
-            
-            <div class="span10 offset1 header">
-                <div class="logo">
-                    <a href="/"><img src="{{ STATIC_URL }}images/logo-v1.jpg" /></a>
+    
+    <div class="header">
+        <div class="container">
+            <div class="row">  
+                <div class="span10 offset1 headerbody">
+                    <div class="logo">
+                        <a href="/"><img src="/images/logo-v1.jpg" /></a>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 
-    <div class="container navbar">
-        <div class="row">
-            <div class="span10 offset1 navlinks">
-                <ul>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/startups">Companies</a></li>
-                    <li><a href="/events">Events</a></li>
-                    <li><a href="/jobs">Jobs</a></li>
-                </ul>
+    <div class="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="span10 offset1 navlinks">
+                    <ul>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/startups">Companies</a></li>
+                        <li><a href="/events">Events</a></li>
+                        <li><a href="/jobs">Jobs</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-
 
     <div class="container">
         <div class="row">
@@ -45,10 +47,10 @@
         </div>
     </div>
 
-    <div class="container footer">
-        <div class="row">
-            <div class="span10 offset1">
-                <div class="footer-content">
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span10 offset1 footer-content">
                     <div class="social">
                         <a href="http://facebook.com/startupcincy" class="sm-icon facebook">&nbsp;</a>
                         <a href="http://twitter.com/startupcincy" class="sm-icon twitter">&nbsp;</a>
@@ -57,7 +59,6 @@
                     <p>&copy;2012 StartupCincy.com</p>
                 </div>
             </div>
-
         </div>
     </div>
 

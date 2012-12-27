@@ -1,1 +1,53 @@
-div.header .logo { margin: 0 auto; width: 255px; }
+.header {
+  margin: 20px auto; 
+  .logo { 
+    margin: 0 auto; 
+    width: 255px; 
+  }
+}
+
+/* Navigation Bar */
+.navigation { 
+  background: url(../images/nav_bg.png) repeat-x; 
+  height: 52px;
+  margin-bottom: 20px;
+  ul {
+    list-style: none;
+    width: 475px;
+    margin: 0 auto;
+    li {
+      float: left;
+      text-align: center;
+      a, a:active, a:visited, a:hover {
+        display: block;
+        padding: 18px 25px 10px 25px;
+        font-size: 17px;
+        line-height: 17px;
+        height: 50px;
+        text-transform: uppercase;
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* Social Media Icons */
+.sm-icon { 
+  width: 36px; 
+  height: 32px; 
+  opacity: 0.4; 
+  float: left; 
+  background: url(../images/sm_icons.png) no-repeat; 
+  background-position: 0 0; 
+  display: block; 
+  text-indent: -9999em;
+  &:hover {
+    opacity: 1;
+  }
+}
+.facebook { background-position: -40px -33px; }
+.facebook:hover { background-position: -40px 0; }
+.twitter { background-position: -90px -33px; }
+.twitter:hover { background-position: -90px 0; }
+

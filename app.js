@@ -5,11 +5,26 @@
 
 var express = require('express')
   , routes = require('./routes')
+  , calendar = require('./calendar')
   , http = require('http')
   , path = require('path')
   , swig = require('swig')
   , cons = require('consolidate')
-  , mongodb = require('mongodb');
+  , mongoose = require('mongoose')
+  , everyauth = require('everyauth')
+  , MongoStore = require('connect-mongo')(express);
+
+mongoose.connect('mongodb://localhost/test');
+
+require('./schemas/users.js')();
+
+User = mongoose.model('User');
+
+// Session store options
+session_options = {
+    clear_interval: -1, // Do not clear
+    mongoose_connection: mongoose.connections[0]
+};
 
 var app = express();
 swig.init({ root: __dirname + '/views', allowErrors: true });
@@ -27,10 +42,12 @@ app.configure(function(){
   app.use(express.cookieParser('ipoohrdtwkmedniwhqbc80ryv6yw4hj98eoiqnc'));
   app.use(express.session({
     secret: 'goredsbengalsetc',
+    store: new MongoStore(session_options)
   }));
   app.use(require('less-middleware')({ src: __dirname + '/public' }));
   app.use(express.static(path.join(__dirname, 'public')));
-  app.use(app.router);
+  app.use(everyauth.middleware());
+  app.use(app.routes);
 });
 
 app.configure('development', function(){
@@ -39,6 +56,7 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.get('/about', routes.about);
+app.get('/admin/event/list', calendar.list)
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

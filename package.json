@@ -11,6 +11,11 @@
     "swig": "*",
     "mongodb": "*",
     "request": "*",
-    "consolidate": "*"
+    "consolidate": "*",
+    "mongoose": "*",
+    "everyauth": "*",
+    "async": "*",
+    "moment": "*",
+    "connect-mongo": "*"
   }
 }
