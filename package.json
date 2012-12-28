@@ -2,9 +2,7 @@
   "name": "startupcincy",
   "version": "0.0.1",
   "private": true,
-  "scripts": {
-    "start": "node app"
-  },
+  "main": "app.js",
   "dependencies": {
     "express": "3.0.0rc3",
     "less-middleware": "*",

@@ -1,8 +1,22 @@
 {% extends 'base.html' %}
 
+{% block body_class %}events{% endblock %}
+
 {% block content %}
 {% for e in events %}
-  <h2>{{ e.summary }}</h2>
-  <p>{{ e.start.dateTime }}</p>
+<div class="row-fluid">
+  <div class="event-calendar span1">
+    <span class="month">{{ e.start|date('M') }}</span>
+    <span class="day">{{ e.start|date('d') }}</span>
+    <span class="time">{{ e.start|date('g:iA') }}</span>
+  </div>
+  <div class="span11">
+  	<div class="event-description">
+	<h3>{{ e.title }}</h3>
+	<p class="location">{{ e.location }}</p>
+	<p>{{ e.description }}</p>
+  </div>
+</div>
+</div>
 {% endfor %}
 {% endblock %}

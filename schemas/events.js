@@ -25,7 +25,7 @@
           , approvalDate: Date
           , destinationId: String
         }
-      , submissionDetails {
+      , submissionDetails: {
             submittedDate: { type: Date, default: Date.now }
           , submittedBy: String
           , submittedIp: String
@@ -41,7 +41,16 @@
 
 
   var EventDetailSchema = new Schema({
+        gCalId: String
+      , title: String
+      , description: String
+      , start: Date
+      , end: Date
+      , location: String
+      , link: String
 
   });
+
+  mongoose.model('EventDetail', EventDetailSchema);
 
  }

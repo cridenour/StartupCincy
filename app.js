@@ -17,6 +17,7 @@ var express = require('express')
 mongoose.connect('mongodb://localhost/test');
 
 require('./schemas/users.js')();
+require('./schemas/events.js')();
 
 User = mongoose.model('User');
 
@@ -33,7 +34,7 @@ app.engine('html', cons.swig);
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
-  app.set('view cache', true);
+  app.set('view cache', false);
   app.set('view engine', 'html');
   app.use(express.favicon(__dirname + '/public/images/favicon.ico'));
   app.use(express.logger('dev'));
@@ -56,7 +57,8 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.get('/about', routes.about);
-app.get('/admin/event/list', calendar.list)
+app.get('/events/refresh', calendar.refresh);
+app.get('/events', calendar.list);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

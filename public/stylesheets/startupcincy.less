@@ -6,9 +6,23 @@
   }
 }
 
+body {
+  background: url(../img/bg.png) repeat-x;
+}
+
+.footer {
+background: #ED1C24;
+}
+
+.footer-content { text-align: center;
+  padding: 10px;
+  color: white;
+  .social { width: 72px; margin: 0 auto; }
+}
+
 /* Navigation Bar */
 .navigation { 
-  background: url(../images/nav_bg.png) repeat-x; 
+  background: url(../img/nav_bg.png) repeat-x; 
   height: 52px;
   margin-bottom: 20px;
   ul {
@@ -38,7 +52,7 @@
   height: 32px; 
   opacity: 0.4; 
   float: left; 
-  background: url(../images/sm_icons.png) no-repeat; 
+  background: url(../img/sm_icons.png) no-repeat; 
   background-position: 0 0; 
   display: block; 
   text-indent: -9999em;
@@ -51,3 +65,17 @@
 .twitter { background-position: -90px -33px; }
 .twitter:hover { background-position: -90px 0; }
 
+.event-calendar { background: url(../img/calendar_blank_small.png) no-repeat; width: 61px; height: 140px; position: relative; float: left; margin-top: 10px; }
+.event-calendar .month { font-size: 11px; display:block; text-transform: uppercase; color: #ddd2c9; position: absolute; top: 10px; left: 18px; }
+.event-calendar .day { font-size: 35px; display: block; color: #464647; position: absolute; top: 33px; left: 11px; }
+.event-calendar .time { font-size: 12px; position: absolute; top: 65px; width: 61px; text-align: center; }
+
+.events {
+  .row { margin: 10px 0; }
+  h3 { color: #ED1C24; margin: 0; }
+  .event-description {
+    margin: 0 auto;
+    width: 95%;
+    .location { margin-top: -5px; font-style: italic;}
+  }
+}

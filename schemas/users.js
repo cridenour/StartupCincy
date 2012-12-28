@@ -79,8 +79,6 @@
               , expires: expiresDate
             }
 
-            console.log(accessToken);
-
             User.create(params, callback);
           }
         },
