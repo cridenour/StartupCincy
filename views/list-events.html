@@ -3,20 +3,34 @@
 {% block body_class %}events{% endblock %}
 
 {% block content %}
-{% for e in events %}
-<div class="row-fluid">
-  <div class="event-calendar span1">
-    <span class="month">{{ e.start|date('M') }}</span>
-    <span class="day">{{ e.start|date('d') }}</span>
-    <span class="time">{{ e.start|date('g:iA') }}</span>
+<div class="event-list">
+{% if events.length %}
+  {% for e in events %}
+  <div class="row-fluid">
+    <div class="event-calendar span2">
+      <span class="month">{{ e.start|date('M') }}</span>
+      <span class="day">{{ e.start|date('d') }}</span>
+      <span class="time">{{ e.start|date('g:iA') }}</span>
+    </div>
+    <div class="span10">
+    	<div class="event-description">
+  	<h3>{{ e.title }}</h3>
+  	<p class="location">{{ e.location }}</p>
+  	<p>{{ e.description }}</p>
+    </div>
   </div>
-  <div class="span11">
-  	<div class="event-description">
-	<h3>{{ e.title }}</h3>
-	<p class="location">{{ e.location }}</p>
-	<p>{{ e.description }}</p>
   </div>
+  {% endfor %}
+  <ul class="pager">
+    <li class="previous {% if page == 1 %}disabled{% endif %}">
+      <a {% if page > 1 %}href="/events?page={{ page - 1 }}"{% endif %}>&larr; Older</a>
+    </li>
+    <li class="next {%if page == pages %}disabled{% endif %}">
+      <a {% if page < pages %}href="/events?page={{ page - 1 + 2 }}"{% endif %}>Newer &rarr;</a>
+    </li>
+  </ul>
+{% else %}
+  There are no more events.
+{% endif %}
 </div>
-</div>
-{% endfor %}
 {% endblock %}

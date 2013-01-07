@@ -2,4 +2,73 @@
 
 {% block body_class %}home{% endblock %}
 
-{% block content %}Hello {{ name }}!{% endblock %}
+{% block content %}
+<div class="home-slider">
+	<div id="homeSlider" class="carousel slide">
+		<div class="carousel-inner">
+			<div class="active item">
+				<img src="/img/drinkup-banner.jpg" />
+				<div class="carousel-caption">
+					<h4>Web/Tech Drinkup</h4>
+					<p>This new meetup is for anyone interested in Digital in Cincinnati.</p>
+					<p><a href="http://meetup.com/Cincinnati-Web-Tech-Drinkup">Find out more</a></p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="/img/cdx-banner.jpg" />
+				<div class="carousel-caption">
+					<h4>Cincinnati Digital XChang</h4>
+					<p>The Cincinnati Digital Xchange covers topics from startups to in-depth analytics.</p>
+					<p><a href="http://www.meetup.com/DigitalXchange/">Attend the next event</a></p>
+				</div>
+			</div>
+		</div>
+ 	</div>
+</div>
+
+<div class="home-content">
+<div class="row-fluid">
+	<div class="span12">
+		<h2>Driven by innovation, backed by community.</h2>
+	</div>
+</div>
+<div class="row-fluid">
+    <div class="span6">
+        <h1>StartupCincy.</h1>
+        <p>Everyone who lives here knows it – there’s something happening in Cincinnati. In fact, there has never been a better time to start a company here. As home to one of the nation's <a href="http://brandery.org" target="_blank">Top Ten Accelerators</a> located in Over-the-Rhine, Fortune 500 companies in our front yard and huge opportunities for investment, Cincinnati is a bourgeoning ecosystem that is primed for massive growth. With it’s resilient downtown core making a comeback and a new generation working to make this the perfect place to live, work and play, the possibilities are endless.</p>
+    </div>
+    <div class="span6 twitter">
+        <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+        <script>
+            new TWTR.Widget({
+                version: 2,
+                type: 'search',
+                search: '#startupcincy',
+                interval: 30000,
+                title: '#startupcincy',
+                subject: '',
+                width: 275,
+                height: 200,
+                theme: {
+                    shell: {
+                        background: '#fcb040',
+                        color: '#ffffff'
+                    },
+                    tweets: {
+                        background: '#ffffff',
+                        color: '#464646',
+                        links: '#42cef6'
+                    }
+                },
+                features: {
+                    scrollbar: false,
+                    loop: true,
+                    live: true,
+                    behavior: 'default'
+                }
+            }).render().start();
+        </script>
+    </div>
+</div>
+</div>
+{% endblock %}

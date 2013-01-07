@@ -5205,20 +5205,57 @@ body {
   width: 61px;
   text-align: center;
 }
-.events .row {
+.event-list .row {
   margin: 10px 0;
 }
-.events h3 {
+.event-list h3 {
   color: #ED1C24;
   margin: 0;
 }
-.events .event-description {
+.event-list .event-description {
   margin: 0 auto;
   width: 95%;
+  overflow: hidden;
 }
-.events .event-description .location {
+.event-list .event-description .location {
   margin-top: -5px;
   font-style: italic;
+}
+.startups .startup {
+  width: 245px;
+}
+.startups .startup .thumbnail {
+  text-align: center;
+  height: 245px;
+  border: none;
+}
+.startups .startup .thumbnail a {
+  color: #ED1C24;
+}
+.about img {
+  margin-bottom: 10px;
+}
+.home-content {
+  margin-bottom: 40px;
+}
+.home-content .twtr-widget {
+  float: right;
+}
+.home-content h1 {
+  margin: 0 0 20px 0;
+  font-size: 42px;
+}
+.home-content h2 {
+  font-size: 36px;
+}
+.home-content h1,
+.home-content h2 {
+  color: #ED1C24;
+  font-weight: normal;
+}
+#homeSlider {
+  width: 690px;
+  margin: 30px auto;
 }
 .pull-right {
   float: right;

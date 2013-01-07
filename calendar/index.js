@@ -83,14 +83,16 @@ exports.refresh = function(req, res) {
             },
             function(eventFound, wfCallback) {
               if(eventFound) {
+                console.log("Updating event.")
                 eventFound.title = item.summary
                 eventFound.description = item.description
                 eventFound.start = start.toDate()
                 eventFound.end = end.toDate()
                 eventFound.location = item.location
                 eventFound.link = ''
-                eventFound.save(function(err){})
+                eventFound.save(wfCallback)
               } else {
+                console.log("Adding event.")
                 var params = {
                   gCalId: item.id,
                   title: item.summary,
@@ -137,16 +139,17 @@ exports.list = function(req, res) {
     },
     function(count, callback) {
       eventCount = count
-      if((page * 10) > count)
+      var skipFrom = (page * 10) - 10
+      if(skipFrom > count)
         callback(null, [])
-      EventDetail.find().where('start').gt(now).limit(10).sort('start').exec(callback)
+      EventDetail.find().where('start').gt(now).sort('start').skip(skipFrom).limit(10).exec(callback)
     }
   ], function(err, events) {
     if(err) {
       res.send('Error accessing database.', 500)
     } else {
       var pages = Math.ceil(eventCount / 10)
-      res.render('list-events', { events: events, pages: pages })
+      res.render('list-events', { events: events, pages: pages, page: page })
     }
   })
   

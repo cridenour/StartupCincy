@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body_class %}startups{% endblock %}
+
+{% block content %}
+<ul class="thumbnails">
+	{% for s in startups %}
+	<li class="startup">
+		<div class="thumbnail">
+			<h4><a href="http://startupgenome.com/{{ s.slug }}" target="_blank">{{ s.name }}</a></h4>
+			<p>{% if s.founded_year > 0 %}<em>Founded in {{ s.founded_year }}</em>{% else %}&nbsp;{% endif %}</p>
+			<img src="{{ s.logo_image_url }}" width="205" onerror="imgError(this)" />
+		</div>
+	</li>
+	{% endfor %}
+</ul>
+{% endblock %}

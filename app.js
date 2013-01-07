@@ -6,6 +6,7 @@
 var express = require('express')
   , routes = require('./routes')
   , calendar = require('./calendar')
+  , startups = require('./startups')
   , http = require('http')
   , path = require('path')
   , swig = require('swig')
@@ -59,6 +60,7 @@ app.get('/', routes.index);
 app.get('/about', routes.about);
 app.get('/events/refresh', calendar.refresh);
 app.get('/events', calendar.list);
+app.get('/startups', startups.list);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
